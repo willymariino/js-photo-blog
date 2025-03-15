@@ -1,29 +1,27 @@
-// inserisco il server da cui vado a prendere le email
-const endpoint = "https://lanciweb.github.io/demo/api/pictures/S"
-
-// indico dove voglio andare a posizionare le email
-const polaroidGrid = document.querySelector(".polaroid-grid")
 
 
+const endpoint = "https://lanciweb.github.io/demo/api/pictures/S";
 
 
-// chiamo  l'API che voglio usare
+const polaroidGrid = document.querySelector(".polaroid-grid");
+
 axios.get(endpoint)
     .then(response => {
-
         const photos = response.data.response;
-        console.log(response)
-        let html = ""
+        let html = "";
 
-        // Crea tutto l'HTML in una volta sola
         photos.forEach(photo => {
             html += `
-      <div class="polaroid">
-        <img src="img/pin.svg" alt="Puntina" class="puntina">
-        <img src="${photo.url}" alt="${photo.title}" class="foto">
-        <p class="caption">${photo.title}</p>
-      </div>
-    `;
+        <div class="polaroid">
+          <img src="img/pin.svg" alt="Puntina" class="puntina">
+          <img src="${photo.url}" alt="${photo.title}" class="foto">
+          <div class="caption">
+            <p><strong>ID:</strong> ${photo.id}</p>
+            <p><strong>Title:</strong> ${photo.title}</p>
+            <p><strong>Date:</strong> ${photo.date}</p>
+          </div>
+        </div>
+      `;
         });
 
         polaroidGrid.innerHTML = html;
