@@ -12,25 +12,25 @@ const polaroidBoard = document.querySelector("polaroid")
 axios.get(endpoint)
     .then(response => {
 
-        const email = response.data.response;
+        const photo = response.data;
         console.log(response)
 
-        // creo elementi html 
-        // polaroidBoard.innerHTML += `<div class="polaroid">
-        //     <img src="img/pin.svg" alt="Puntina" class="puntina">
-        //     <img src="${"url"}" alt="Foto"
-        //         class="foto">
-        //     <p class="caption">${"id"}</p>
-        //     <p class="caption">${"title"}</p>
-        //     <p class="caption">${"date"}</p>
-        // </div>`
 
+        let html = "";
+        photos.forEach(photo => {
+            html += `
+        <div class="polaroid">
+          <img src="img/pin.svg" alt="Puntina" class="puntina">
+          <img src="${url}" alt="${id}" class="foto">
+          <p>${title}</p>
+        </div>
+      `;
+        });
 
-
-    }).catch(error => {
-        console.log("errore", error)
+        // Inserisce l’HTML nella griglia
+        photoGrid.innerHTML = html;
     })
-
-
-
-
+    .catch(error => {
+        console.error("Errore nel caricamento immagini:", error);
+        photoGrid.innerHTML = <p style="color:red;">Errore nel caricamento immagini</p>;
+    })
