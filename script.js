@@ -2,8 +2,7 @@
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/S"
 
 // indico dove voglio andare a posizionare le email
-const polaroidGrid = document.querySelector("polaroid-grid")
-const polaroidBoard = document.querySelector("polaroid")
+const polaroidGrid = document.querySelector(".polaroid-grid")
 
 
 
@@ -12,25 +11,23 @@ const polaroidBoard = document.querySelector("polaroid")
 axios.get(endpoint)
     .then(response => {
 
-        const photo = response.data;
+        const photos = response.data.response;
         console.log(response)
+        let html = ""
 
-
-        let html = "";
+        // Crea tutto l'HTML in una volta sola
         photos.forEach(photo => {
             html += `
-        <div class="polaroid">
-          <img src="img/pin.svg" alt="Puntina" class="puntina">
-          <img src="${url}" alt="${id}" class="foto">
-          <p>${title}</p>
-        </div>
-      `;
+      <div class="polaroid">
+        <img src="img/pin.svg" alt="Puntina" class="puntina">
+        <img src="${photo.url}" alt="${photo.title}" class="foto">
+        <p class="caption">${photo.title}</p>
+      </div>
+    `;
         });
 
-        // Inserisce l’HTML nella griglia
-        photoGrid.innerHTML = html;
+        polaroidGrid.innerHTML = html;
     })
     .catch(error => {
         console.error("Errore nel caricamento immagini:", error);
-        photoGrid.innerHTML = <p style="color:red;">Errore nel caricamento immagini</p>;
-    })
+    });
