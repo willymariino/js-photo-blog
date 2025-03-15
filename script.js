@@ -16,14 +16,14 @@ axios.get(endpoint)
         console.log(response)
 
         // creo elementi html 
-        polaroidBoard.innerHTML += `<div class="polaroid">
-            <img src="img/pin.svg" alt="Puntina" class="puntina">
-            <img src="${url}" alt="Foto"
-                class="foto">
-            <p class="caption">${id}</p>
-            <p class="caption">${title}</p>
-            <p class="caption">${date}</p>
-        </div>`
+        // polaroidBoard.innerHTML += `<div class="polaroid">
+        //     <img src="img/pin.svg" alt="Puntina" class="puntina">
+        //     <img src="${"url"}" alt="Foto"
+        //         class="foto">
+        //     <p class="caption">${"id"}</p>
+        //     <p class="caption">${"title"}</p>
+        //     <p class="caption">${"date"}</p>
+        // </div>`
 
 
 
