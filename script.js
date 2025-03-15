@@ -24,7 +24,7 @@ axios.get(endpoint)
       `;
         });
 
-        polaroidGrid.innerHTML = html;
+
     })
     .catch(error => {
         console.error("Errore nel caricamento immagini:", error);
