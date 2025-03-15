@@ -3,15 +3,15 @@
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/S";
 
 
-const polaroidGrid = document.querySelector(".polaroid-grid");
+const polaroidGrid = document.getElementById("polaroid-grid");
 
 axios.get(endpoint)
     .then(response => {
         const photos = response.data.response;
-        let html = "";
+
 
         photos.forEach(photo => {
-            html += `
+            polaroidGrid.innerHTML += `
         <div class="polaroid">
           <img src="img/pin.svg" alt="Puntina" class="puntina">
           <img src="${photo.url}" alt="${photo.title}" class="foto">

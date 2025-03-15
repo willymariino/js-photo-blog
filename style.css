@@ -55,7 +55,7 @@ header {
 }
 
 /* Griglia delle polaroid */
-.polaroid-grid {
+#polaroid-grid {
     position: absolute;
     top: 0;
     display: grid;
