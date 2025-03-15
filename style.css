@@ -47,3 +47,10 @@ header {
     align-items: center;
     flex-direction: column;
 }
+
+.sfondo-sughero {
+    width: 100%;
+    height: auto;
+
+    max-width: 1200px;
+}
