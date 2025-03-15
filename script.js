@@ -2,10 +2,10 @@
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/S"
 
 // indico dove voglio andare a posizionare le email
-const emailContainer = document.querySelector("polaroid-grid")
-const emailList = document.querySelector("polaroid")
+const polaroidGrid = document.querySelector("polaroid-grid")
+const polaroidBoard = document.querySelector("polaroid")
 
-const emailCount = 10
+
 
 
 // chiamo  l'API che voglio usare
@@ -16,7 +16,14 @@ axios.get(endpoint)
         console.log(response)
 
         // creo elementi html 
-        emailList.innerHTML += `<li>${email}<li>`
+        polaroidBoard.innerHTML += `<div class="polaroid">
+            <img src="img/pin.svg" alt="Puntina" class="puntina">
+            <img src="${url}" alt="Foto"
+                class="foto">
+            <p class="caption">${id}</p>
+            <p class="caption">${title}</p>
+            <p class="caption">${date}</p>
+        </div>`
 
 
 
