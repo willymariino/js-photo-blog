@@ -30,6 +30,12 @@ axios.get(endpoint)
 
 
 
+
+
+
+
+
+
   })
   .catch(error => {
     console.error("Errore nel caricamento immagini:", error);

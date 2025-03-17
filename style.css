@@ -110,7 +110,7 @@ header {
     cursor: pointer;
 }
 
-.button {
+.close-overlay {
     display: none;
     position: fixed;
 }
