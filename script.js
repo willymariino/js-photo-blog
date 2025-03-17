@@ -5,7 +5,7 @@ const polaroidGrid = document.getElementById("polaroid-grid");
 
 axios.get(endpoint)
   .then(response => {
-    const photos = response.data.;
+    const photos = response.data;
 
 
     photos.forEach(photo => {
