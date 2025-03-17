@@ -97,7 +97,7 @@ header {
     object-fit: cover;
 }
 
-#overlay {
+.overlay {
     position: fixed;
     display: none;
     width: 100%;
