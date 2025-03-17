@@ -25,20 +25,10 @@ axios.get(endpoint)
     });
 
     // seleziono l'immagine
-    document.querySelectorAll(".foto").forEach(img => {
-      img.addEventListener("click", () => {
-        document.querySelector(".overlay-image")
-        document.querySelector(".overlay").style.display = "block"
 
-
-
-
-      })
-
-
-
-    })
-
+    const overlay = document.querySelector("overlay")
+    const overlayImg = document.querySelector("overlay-img")
+    const closeOverlay = document.querySelector("close-overlay")
 
     // bottone chiudi
     document.querySelector('.close-overlay').addEventListener('click', () => {
