@@ -27,7 +27,7 @@ axios.get(endpoint)
     // seleziono l'immagine
     document.querySelectorAll(".foto").forEach(img => {
       img.addEventListener("click", () => {
-        document.querySelector(".overlay-image").src = img.src
+        document.querySelector(".overlay-image")
         document.querySelector(".overlay").style.display = "block"
 
 
