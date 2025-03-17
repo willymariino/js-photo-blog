@@ -31,7 +31,7 @@ axios.get(endpoint)
     const closeOverlay = document.querySelector("close-overlay")
 
     const overlayFoto = document.querySelectorAll(".foto")
-    allImages.forEach(img => {
+    overlayFoto.forEach(img => {
       img.addEventlistener("click", () => {
         overlay.style.display = "block"
 
