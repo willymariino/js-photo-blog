@@ -10,6 +10,8 @@ axios.get(endpoint)
 
     photos.forEach(photo => {
       polaroidGrid.innerHTML += `
+      <div class="overlay"> <img src="${photo.url}" alt="${photo.title}" class="foto"> </div>
+          <div class="overlay button"> <button>chiudi</button> </div>
         <div class="polaroid">
           <img src="img/pin.svg" alt="Puntina" class="puntina">
           <div class="overlay"> <img src="${photo.url}" alt="${photo.title}" class="foto"> </div>
