@@ -45,10 +45,10 @@ axios.get(endpoint)
       overlay.style.display = "none"
 
 
-    }
+    })
 
 
-    )
+
 
 
 
