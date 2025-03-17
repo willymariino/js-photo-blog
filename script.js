@@ -1,15 +1,15 @@
-const endpoint = "https://lanciweb.github.io/demo/api/pictures/S";
+const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
 
 const polaroidGrid = document.getElementById("polaroid-grid");
 
 axios.get(endpoint)
-    .then(response => {
-        const photos = response.data.response;
+  .then(response => {
+    const photos = response.data.response;
 
 
-        photos.forEach(photo => {
-            polaroidGrid.innerHTML += `
+    photos.forEach(photo => {
+      polaroidGrid.innerHTML = `
         <div class="polaroid">
           <img src="img/pin.svg" alt="Puntina" class="puntina">
           <img src="${photo.url}" alt="${photo.title}" class="foto">
@@ -20,10 +20,10 @@ axios.get(endpoint)
           </div>
         </div>
       `;
-        });
-
-
-    })
-    .catch(error => {
-        console.error("Errore nel caricamento immagini:", error);
     });
+
+
+  })
+  .catch(error => {
+    console.error("Errore nel caricamento immagini:", error);
+  });
