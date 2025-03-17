@@ -12,6 +12,7 @@ axios.get(endpoint)
       polaroidGrid.innerHTML += `
         <div class="polaroid">
           <img src="img/pin.svg" alt="Puntina" class="puntina">
+          <div id="overlay"> <img src="${photo.url}" alt="${photo.title}" class="foto"> </div>
           <img src="${photo.url}" alt="${photo.title}" class="foto">
           <div class="caption">
             <p><strong>ID:</strong> ${photo.id}</p>
