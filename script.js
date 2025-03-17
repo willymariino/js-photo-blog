@@ -26,9 +26,9 @@ axios.get(endpoint)
 
     // seleziono gli elementi
 
-    const overlay = document.querySelector("overlay")
-    const overlayImg = document.querySelector("overlay-img")
-    const closeOverlay = document.querySelector("close-overlay")
+    const overlay = document.querySelector(".overlay")
+    const overlayImg = document.querySelector(".overlay-img")
+    const closeOverlay = document.querySelector(".close-overlay")
 
     const overlayFoto = document.querySelectorAll(".foto")
     overlayFoto.forEach(img => {
