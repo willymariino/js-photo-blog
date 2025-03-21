@@ -39,7 +39,7 @@ header {
 
 /* MAIN - bacheca */
 .bacheca {
-
+    background: url(img/cork.png);
     position: relative;
     background-size: cover;
     display: flex;
