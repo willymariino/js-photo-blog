@@ -39,7 +39,7 @@ header {
 
 /* MAIN - bacheca */
 .bacheca {
-    background: url(img/cork.png);
+
     position: relative;
     background-size: cover;
     display: flex;
@@ -50,7 +50,7 @@ header {
 
 .sfondo-sughero {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 1200px;
 }
 
