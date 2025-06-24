@@ -21,9 +21,9 @@ The focus was on mastering responsive grid layouts, CSS positioning, DOM manipul
 - **HTML5** – Semantic structure and layout
 - **CSS3** – Grid layout, absolute/relative positioning, z-index, animations
 - **JavaScript (ES6)** – DOM manipulation and dynamic rendering
-- **Axios** – For fetching image and data from the API
+- **Axios** – For fetching images and data from the API
 - **Netlify** – For live deployment
 
 ## Live Demo
 
-**[photoblog]**(https://photologcom.netlify.app/)
+**[photoblog](https://photologcom.netlify.app/)**
